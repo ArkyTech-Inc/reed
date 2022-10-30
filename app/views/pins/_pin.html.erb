@@ -1,0 +1,25 @@
+<div id="<%= dom_id pin %>">
+  <p>
+    <strong>Title:</strong>
+    <%= pin.title %>
+  </p>
+  
+<% if pin.file.attached? %>
+    
+<div class="row">
+  <% if pin.file.image? %>
+      <div class="message-image-container">
+      <%= image_tag(pin.file, class:"message-image") %>     
+</div>
+  <% elsif pin.file.video? %>
+      <%= video_tag(url_for(pin.file), class:"message-video", controls: "") %>
+  <% elsif pin.file.audio? %>
+      <%= audio_tag(url_for(pin.file), class:"message-audio", controls: "") %>
+  <% else %>
+      <%= link_to pin.file.filename, url_for(pin.file), class:"link-success" %>
+       <% end %>
+</div>
+
+<% end %>
+
+</div>

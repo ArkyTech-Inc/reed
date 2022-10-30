@@ -1,0 +1,9 @@
+
+<%= render @pin %>
+
+<div>
+  <%= link_to "Edit this course", edit_pin_path(@pin) %> |
+  <%= link_to "Back to course", pins_path %>
+
+  <%= button_to "Delete course", @pin, method: :delete %>
+</div>

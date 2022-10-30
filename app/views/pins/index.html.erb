@@ -1,0 +1,12 @@
+<h1>Courses</h1>
+
+<div id="pins">
+  <% @pins.each do |pin| %>
+    <%= render pin %>
+    <p>
+      <%= link_to "Show this course", pin %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New course note", new_pin_path %>
