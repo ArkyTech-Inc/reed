@@ -1,16 +1,10 @@
 <div class="container">
     <h5> You are logged in as <%= current_user.email%> , you can chat with other users below: </h5>
     <h4> Users </h4>
-    <%= turbo_stream_from "users" %>
-  <div id="users">
     <%= render @users %>
-  </div>
+
     <br/>
 
-    <%= turbo_stream_from "users" %>
- <div id="rooms">
     <h4> Rooms </h4>
     <% render @rooms %>
  </div>
- 
-</div>
