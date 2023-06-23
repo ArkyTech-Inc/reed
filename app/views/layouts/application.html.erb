@@ -20,52 +20,10 @@
 <% if notice %>
   <%= render "layouts/alerts" %>
 <% end %>
+
 <br/>
   <%= yield %>
 <br/>
-
-<center>
-<h3><u> Chat with the AI about Classes </u></h3>
-<br/>
-  <div id="chat">
-  <input type="text" id="user-input" placeholder="Type your message here">
-  <br/>
-  <div id="chat-log"></div>
-</div>
-
-<script>
-
-  const chatLog = document.getElementById('chat-log');
-  const userInput = document.getElementById('user-input');
-
-  function displayMessage(message, role) {
-    const messageDiv = document.createElement('div');
-    messageDiv.classList.add(role);
-    messageDiv.textContent = message;
-    chatLog.appendChild(messageDiv);
-  }
-
-  userInput.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-      const message = userInput.value;
-      displayMessage(message, 'user');
-      userInput.value = '';
- 
-
-      fetch('/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json'},
-        body: JSON.stringify({ message: message })
-      })
-        .then(response => response.json())
-        .then(data => {
-          const response = data.response;
-          displayMessage(response, 'assistant');
-        });
-    }
-  });
-</script>
-</center>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
