@@ -1,15 +1,242 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+
+#logo {
+   width: 200px;
+   height: 100px;
+ }
+ 
+/*Leftpanel code for sign up */
+ .left-panel{
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 109px 42px;
+gap: 10px;
+
+position: absolute;
+width: 539px;
+height: 906px;
+left: 0px;
+top: 56px;
+
+background: #E4ECF0;
+ }
+
+/*Rightpanel code for sign up */
+ .right-panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 44px;
+    
+    position: absolute;
+    width: 480px;
+    height: 722.7px;
+    left: 749.5px;
+    top: 151px;
+
+ }
+
+ .reed{
+    
+width: 260.67px;
+height: 61.7px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 45.3333px;
+line-height: 30px;
+/* or 67% */
+
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 29.5926px;
+
+/* Logo Black (midfi) */
+
+color: #343333;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+ }
+
+ #phrase {
+    width: 293px;
+    height: 30px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    /* identical to box height, or 125% */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    /* Logo Black (midfi) */
+    
+    color: #343333;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0; 
+ }
+
+ .field{
+    align-content: space-between;
+    display: flexbox;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+ }
+
+#signout{
+   Width:207px;
+  Height: 108px;
+/* Reed bg */
+
+
+position: absolute;
+width: 207px;
+height: 108px;
+left: 0px;
+top: 0px;
+
+/* Teal */
+
+background: #093D48;
+}
+
+
+/*Leftpanel code for svgs and texts*/
+
+#svg-learn{
+position: absolute;
+width: 142px;
+height: 116.31px;
+left: 0px;
+top: calc(50% - 116.31px/2 + 0.16px);
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+}
+
+
+#learn-text{
+position: absolute;
+width: -199px;
+height: 98px;
+right: 90px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 48px;
+line-height: 48px;
+color: #121210;
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+}
+
+#connect-text{
+position: absolute;
+width: 209px;
+height: 98px;
+left: 5px;
+bottom: 450px;
+
+/* Header 1 */
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 48px;
+line-height: 48px;
+/* identical to box height, or 100% */
+
+text-align: center;
+
+/* Black */
+
+color: #121210;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+}
+
+#svgg{
+position: absolute;
+left: 72.62%;
+right: 80.36%;
+top: 36.82%;
+bottom: 53.1%;
+}
+
+#svg-share{
+position: absolute;
+left: 7.62%;
+right: 80.36%;
+top: 64.82%;
+bottom: 99.1%;
+
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+}
+
+#share-text{
+position: absolute;
+padding-top: 96%;
+right: 90px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 48px;
+line-height: 48px;
+/* identical to box height, or 100% */
+
+
+/* Black */
+
+color: #121210;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+}
+
+/*//////////////////////////////// HOMEPAGE/////////////////////////////////////////////////////////*/

@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Reed
   class Application < Rails::Application
+    config.api_key = "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"
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
@@ -17,6 +18,8 @@ module Reed
     # in config/environments, which are processed later.
     #
     # config.time_zone = "Central Time (US & Canada)"
-    # config.eager_load_paths << Rails.root.join("extras")
+    # config.eager_load_paths << Rails.root.join("extras")      
   end
+  
 end
+
